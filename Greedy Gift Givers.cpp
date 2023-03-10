@@ -4,9 +4,7 @@ LANG: C++
 TASK: gift1
 */
 
-
-
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 int np;
@@ -26,26 +24,28 @@ int main(){
 		namesList.push_back(name);
 	
 	} 
-for(int i = 0; i < np; i++){
-	string sender; fin >> sender;
-	int amount; fin >> amount;
-	int num_people; fin >> num_people;
-	vector <string> people;
-		for(int i = 0; i < num_people; i++){
-			string person; fin >> person;
-			people.push_back(person);
-		}
-		if(num_people == 0) continue;
-		int moneyGot = amount / num_people;
-		money[names[sender]]  -= moneyGot *  num_people;
-		for(int j = 0; j < num_people; j++){
-			money [names[people[j]]] += moneyGot;
-		}
+	for(int i = 0; i < np; i++){
+		string sender; fin >> sender;
+		int amount; fin >> amount;
+		int num_people; fin >> num_people;
+		vector <string> people;
+			for(int i = 0; i < num_people; i++){
+				string person; fin >> person;
+				people.push_back(person);
+			}
+			if(num_people == 0){
+				continue;
+			}
+			int moneyGot = amount / num_people; 
+			money[names[sender]]  -= moneyGot *  num_people;
+			for(int j = 0; j < num_people; j++){
+				money [names[people[j]]] += moneyGot;
+			}
 	
-	}
- for(int p = 0; p <np; p++){
-	 fout << namesList[p] << " " << money[p]<< endl;
- }
+		}
+ 	for(int p = 0; p <np; p++){
+		 fout << namesList[p] << " " << money[p]<< endl;
+ 	}
 }
 /*Explanation:
 First we take in the input of how many people are there
