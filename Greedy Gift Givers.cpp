@@ -41,7 +41,6 @@ int main(){
 			for(int j = 0; j < num_people; j++){
 				money [names[people[j]]] += moneyGot;
 			}
-	
 		}
  	for(int p = 0; p <np; p++){
 		 fout << namesList[p] << " " << money[p]<< endl;
