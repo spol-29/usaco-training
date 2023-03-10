@@ -22,7 +22,6 @@ int main(){
 		names[name] = i;
 		money[i] = 0;
 		namesList.push_back(name);
-	
 	} 
 	for(int i = 0; i < np; i++){
 		string sender; fin >> sender;
