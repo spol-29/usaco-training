@@ -18,4 +18,4 @@ int main(){
     cout << curr << " " << res << endl;
     long long ans1 = curr % 47;
     long long ans2 = curr % 47;
-} 
+}
