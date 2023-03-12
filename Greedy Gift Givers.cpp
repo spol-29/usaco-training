@@ -14,7 +14,7 @@ int money[20];
 int main(){
 	ifstream fin ("gift1.in");
 	ofstream fout ("gift1.out");
-
+	
 	fin >> np;
 	vector <string> namesList;
 	for(int i = 0; i < np; i++){
